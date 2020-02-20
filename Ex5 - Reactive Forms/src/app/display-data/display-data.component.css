@@ -1,3 +1,5 @@
+*{
+}
 p{
     color: black;
     font-weight: bold;
@@ -8,9 +10,11 @@ p{
 h1{
     display: flex;
     margin: 10px;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 30px;
 }
 h4{
+    /* font-family: 'Barlow Condensed', sans-serif; */
     display: flex;
     margin: 2px;
     text-align: center;    
@@ -28,7 +32,7 @@ tr{
     margin: 10px;
     border: 2px black solid;
     padding: 15px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     box-shadow: 2px 2px 5px darkblue;
 }
 .visual_data{

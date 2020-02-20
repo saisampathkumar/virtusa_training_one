@@ -41,6 +41,9 @@ export class SurveyFormComponent implements OnInit {
     date_data : new FormControl(this.today_date.getMonth()+"/"+this.today_date.getDate()+"/"+this.today_date.getFullYear()),
   })
 
+  
+
+
   submitForm(){
     let theForm = this.SurveyForm.value
     console.log( JSON.stringify(theForm,null,2));

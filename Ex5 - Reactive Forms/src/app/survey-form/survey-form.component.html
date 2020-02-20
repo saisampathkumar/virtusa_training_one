@@ -17,7 +17,7 @@
         <select formControlName="state_data">
             <option *ngFor="let state of states" value="{{state}}">{{state}}</option>
         </select>
-        <span style="color:red;font-weight: bold;" [hidden]="SurveyForm.controls.state_data.valid || SurveyForm.controls.state_data.untouched">Please select your state</span>
+        <!-- <span style="color:red;font-weight: bold;" [hidden]="SurveyForm.controls.state_data.valid || SurveyForm.controls.state_data.untouched">Please select your state</span> -->
     </div>
     <div>
         <h4>Age:</h4>
