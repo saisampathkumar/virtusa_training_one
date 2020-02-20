@@ -1,64 +1,55 @@
-<form #theForm = "ngForm">
+
+<form [formGroup]="SurveyForm" (ngSubmit)="submitForm()">
+    <h1>Application for Survey</h1>
     <div>
         <h4>User Name: </h4>
-        <input #theName="ngModel" name="fullname" [(ngModel)]="fullname" required type="text">
+        <input formControlName="fullname" required type="text">
         <!-- {{fullname}} -->
-        <span style="color:red;font-weight: bold;" [hidden]="theName.valid || theName.untouched" >Please enter your user name</span>
+        <span style="color:red;font-weight: bold;" [hidden]="SurveyForm.controls.fullname.valid || SurveyForm.controls.fullname.untouched" >Please enter your user name</span>
     </div>
     <div>
         <h4>Email: </h4>
-        <input #theEmail="ngModel" #theE [(ngModel)]="EmailId" name="EmailId" required type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" >
-        <span style="color:red;font-weight: bold;" [hidden]=" theEmail.valid || theEmail.untouched" >Please enter your valid Email</span>
-        <!-- <p>valid:{{theEmail.valid}}</p>
-        <br>
-        <p>untouched:{{theEmail.untouched}}</p>
-        <br>
-        <p>invalid:{{theEmail.invalid}}</p>
-        <br>
-        <p>touched:{{theEmail.touched}}</p> -->
+        <input formControlName="EmailId" required type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" >
+        <span style="color:red;font-weight: bold;" [hidden]=" SurveyForm.controls.EmailId.valid || SurveyForm.controls.EmailId.untouched" >Please enter your valid Email</span>
     </div>
     <div>
         <h4>State:</h4>
-        <select #theState="ngModel" required [(ngModel)]="state_data" name="state_data">
+        <select formControlName="state_data">
             <option *ngFor="let state of states" value="{{state}}">{{state}}</option>
         </select>
-        <span style="color:red;font-weight: bold;" [hidden]="theState.valid || theState.untouched">Please select your state</span>
+        <span style="color:red;font-weight: bold;" [hidden]="SurveyForm.controls.state_data.valid || SurveyForm.controls.state_data.untouched">Please select your state</span>
     </div>
     <div>
         <h4>Age:</h4>
-        <input  #theage="ngModel" required [(ngModel)]="age" name="age" type="number" min="10" max="100">
-        <span style="color:red;font-weight: bold;" [hidden]="theage.valid || theage.untouched">Please select your age</span>
+        <input formControlName="age" required type="number" min="10" max="100">
+        <span style="color:red;font-weight: bold;" [hidden]="SurveyForm.controls.age.valid || SurveyForm.controls.age.untouched">Please select your age</span>
     </div>
     <div>
         <h4>What's your favorite ice cream flavor </h4>
-        <select #theflavors_data="ngModel" required [(ngModel)]="flavors_data" name="flavors_data">
+        <select formControlName="flavors_data">
             <option *ngFor="let flavour of flavours" value="{{flavour}}">{{flavour}}</option>
         </select>
-        <span style="color:red;font-weight: bold;" [hidden]="theflavors_data.valid || theflavors_data.untouched">Please select your favorite flavor</span>
     </div>
     <div>
         <h4>What's your favorite meal  </h4>
-        <select #themeal_data="ngModel" required [(ngModel)]="meal_data" name="meal_data">
+        <select formControlName="meal_data">
             <option *ngFor="let meal of meals" value="{{meal}}">{{meal}}</option>
         </select>
-        <span style="color:red;font-weight: bold;" [hidden]="themeal_data.valid || themeal_data.untouched">Please select your favorite meal</span>
     </div>
     <div>
         <h4>How many cups of coffee do you drink on average every day? </h4>
-        <input #thecups_data="ngModel" required [(ngModel)]="cups_data" name="cups_data" type="number" min="1" max="10">
-        <span style="color:red;font-weight: bold;" [hidden]="thecups_data.valid || thecups_data.untouched">Please select min coffee cups</span>
+        <input formControlName="cups_data" type="number" min="1" max="10">
     </div>
     <div>
         <h4>What type of music is your favorite? </h4>
-        <select #themusic_data="ngModel" required [(ngModel)]="music_data" name="music_data">
+        <select formControlName="music_data">
             <option *ngFor="let music of musics" value="{{music}}">{{music}}</option>
         </select>
-        <span style="color:red;font-weight: bold;" [hidden]="themusic_data.valid || themusic_data.untouched">Please select your favorite music</span>
     </div>
     <div>
         <h4>What's your favorite movie: </h4>
-        <input #themovie_data="ngModel" required [(ngModel)]="movie_data" name="movie_data" type="text">
-        <span style="color:red;font-weight: bold;" [hidden]="themovie_data.valid || themovie_data.untouched">Please provide your favorite movie.</span>
+        <input formControlName="movie_data" type="text">
     </div>
-        <button [disabled]="theForm.invalid" [ngClass]={button_disabled:theForm.invalid,button_enable:!theForm.invalid} (click)="submitForm(theForm)">SUBMIT</button>
+        <button type="submit" [disabled]="SurveyForm.invalid">SUBMIT</button>
+        <!-- <button [disabled]="theForm.invalid" [ngClass]={button_disabled:theForm.invalid,button_enable:!theForm.invalid} (click)="submitForm(theForm)">SUBMIT</button> -->
 </form>

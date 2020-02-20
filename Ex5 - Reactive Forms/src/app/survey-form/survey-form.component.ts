@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+// import { NgForm } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-survey-form',
@@ -23,51 +24,34 @@ export class SurveyFormComponent implements OnInit {
   meals:string[] = ["breakfast", "lunch", "dinner"];
 
   today_date = new Date();
-  
-  form_item:object = {};
   form_data:object[] = [{}];
-
   counter:number;
-
   submit_status:boolean = false;
 
-  fullname:string;
-  movie_data:string;
-  music_data:string;
-  cups_data:string;
-  meal_data:string;
-  flavors_data:string;
-  age:number;
-  state_data:string;
-  EmailId:string;
-  date_data:string=this.today_date.getMonth()+"/"+this.today_date.getDate()+"/"+this.today_date.getFullYear();
+  SurveyForm = new FormGroup({
+    fullname: new FormControl(''),
+    movie_data: new FormControl(''),
+    music_data: new FormControl(''),
+    cups_data: new FormControl(''),
+    meal_data: new FormControl(''),
+    flavors_data: new FormControl(''),
+    age : new FormControl(),
+    state_data: new FormControl(''),
+    EmailId: new FormControl(''),
+    date_data : new FormControl(this.today_date.getMonth()+"/"+this.today_date.getDate()+"/"+this.today_date.getFullYear()),
+  })
 
-  submitForm(theForm:NgForm){
-    console.log(theForm);
-    this.form_item = {
-    fullname:this.fullname,
-    movie_data:this.movie_data,
-    music_data:this.music_data,
-    cups_data:this.cups_data,
-    meal_data:this.meal_data,
-    flavors_data:this.flavors_data,
-    age:this.age,
-    state_data:this.state_data,
-    EmailId:this.EmailId,
-    date_data:this.date_data,
-    counter:this.form_data.length+1,
-    }
-    console.log(this.form_item);
-    console.log(this.date_data);
-
-    if(this.fullname !== null){
-      this.form_data.push(this.form_item);
+  submitForm(){
+    let theForm = this.SurveyForm.value
+    console.log( JSON.stringify(theForm,null,2));
+    // if(theForm.value.fullname.value !== null){
+      this.form_data.push(theForm);
       localStorage.setItem(
         'form_data',
-        JSON.stringify(this.form_data)
+        JSON.stringify(this.form_data, null, 2)
       );
       location.reload();
-    }    
+    // }    
   }
 
 

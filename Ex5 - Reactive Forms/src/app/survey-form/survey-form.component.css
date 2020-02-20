@@ -1,7 +1,19 @@
+input.ng-touched.ng-invalid{
+    border: red 2px solid;
+}
+select.ng-touched.ng-invalid{
+    border: red 2px solid;
+}
+
+
 *{
     font-size: 20px;
     margin: 0;
     padding: 0;
+}
+h1{
+    margin: 5px auto;
+    font-size: larger;
 }
 form{
     display: flex;
@@ -18,10 +30,10 @@ div{
     transition: 0.5s ease-in-out;
     padding: 5px 20px;
 }
-input:focus select:focus div{
+/* input:focus, select:focus div{
     border: 2px solid black;
     transition: 0.5s ease-in-out;
-}
+} */
 li{
     list-style: none;
 }
@@ -30,7 +42,11 @@ input, select{
     width: 400px;
     height: 35px;
     border-radius: 5px;
-    border: black 1px solid;
+    background-color: lightgray;
+    border-bottom: black 2px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 span{
     position: absolute;
@@ -85,9 +101,4 @@ button{
     font-size: larger;
 }
 
-input.ng-touched.ng-invalid{
-    border: red 2px solid;
-}
-select.ng-touched.ng-invalid{
-    border: red 2px solid;
-}
+
