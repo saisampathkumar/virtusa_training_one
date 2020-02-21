@@ -1,92 +1,6 @@
-/* .Home_Page_Container{
-    display: flex;
-}
-.Cards_Container{
-    flex-wrap: wrap;
-    display: flex;  
-}
-.Cards{
-    background-color: black;
-    height: 400px;
-    margin: 20px;
-    color: #fff;
-    box-shadow: 2px 2px 10px black;
-    border-radius: 10px;
-}
-.Cards:hover{
-    cursor: pointer;
-}
-
-.Cards:hover img{
-    opacity: 90%;
-}
-
-.Cards h3{
-    display: block;
-    justify-content: center;
-    text-align: center;
-    padding: 0;
-    margin: 10px auto;
-}
-.Cards img{
-    border-radius: 10px 10px 0 0;
-    height: 280px;
-}
-
-.Card_items{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-.Card_items input{
-    width: 50px;
-    font-size: larger;
-    margin: 0 5px;
-    text-align: center;
-} 
-.Card_items button{
-    width: 40px;
-    font-size: larger;
-    height: 40px;
-    border-radius: 50%;
-    margin: 0 5px;
-    outline: none;
-}
-
-.Card_items .checkbox{
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-}
-.Cards_Container_changer{
-    background-color: black;
-    color: white;
-    font-family: 'Cinzel', serif;
-}
-.Cards_changer{
-    background-color: white;
-    color: black;
-    font-family: 'Cinzel', serif;
-    box-shadow: 2px 2px 10px white;
-    padding: 10px;
-}
-.Card_items_changer{
-    margin: 10px;
-}
-.Card_items_changer button{
-    background-color: black;
-    color: white;
-}
-.Card_items_changer input{
-    background-color: black;
-    color: white;
-} */
-
-
-
 .Home_Page_Container{
     display: flex;
-    height: 90vh;
+    height: 95vh;
 }
 .Cards_Container{
     display: flex;
@@ -191,3 +105,87 @@
     background-color: black;
     color: white;
 } 
+
+/* .Home_Page_Container{
+    display: flex;
+}
+.Cards_Container{
+    flex-wrap: wrap;
+    display: flex;  
+}
+.Cards{
+    background-color: black;
+    height: 400px;
+    margin: 20px;
+    color: #fff;
+    box-shadow: 2px 2px 10px black;
+    border-radius: 10px;
+}
+.Cards:hover{
+    cursor: pointer;
+}
+
+.Cards:hover img{
+    opacity: 90%;
+}
+
+.Cards h3{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 10px auto;
+}
+.Cards img{
+    border-radius: 10px 10px 0 0;
+    height: 280px;
+}
+
+.Card_items{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.Card_items input{
+    width: 50px;
+    font-size: larger;
+    margin: 0 5px;
+    text-align: center;
+} 
+.Card_items button{
+    width: 40px;
+    font-size: larger;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 5px;
+    outline: none;
+}
+
+.Card_items .checkbox{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+.Cards_Container_changer{
+    background-color: black;
+    color: white;
+    font-family: 'Cinzel', serif;
+}
+.Cards_changer{
+    background-color: white;
+    color: black;
+    font-family: 'Cinzel', serif;
+    box-shadow: 2px 2px 10px white;
+    padding: 10px;
+}
+.Card_items_changer{
+    margin: 10px;
+}
+.Card_items_changer button{
+    background-color: black;
+    color: white;
+}
+.Card_items_changer input{
+    background-color: black;
+    color: white;
+} */
