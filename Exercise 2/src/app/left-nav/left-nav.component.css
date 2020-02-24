@@ -1,0 +1,31 @@
+ul{
+    background-color: #00203FFF;
+    color: darkgray;
+    width: 15vw;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    height: 77.3vh;
+    position: fixed;
+    top:13vh;
+    left: 0;
+    font-size: 20px;
+    font-weight: bold;
+    border-right: 1vh solid brown;
+}
+ul li{
+    border-bottom: 0.25vw solid white;
+    width: 15vw;
+    padding: 4vh 0;
+}
+/* ul li:nth-of-type(5){
+    border-bottom: 0.25vw solid white;
+} */
+ul li:hover{
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+    font-size: 30px;
+    padding: 3vh 0;
+    /* font-style: italic; */
+}

@@ -1,0 +1,135 @@
+*{
+    font-family: 'Source Serif Pro', serif;
+}
+.header_Container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+ul ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+li{
+    list-style: none;
+    display: block;
+    margin: auto auto;
+}
+h1{
+    margin-left: 40px ;
+}
+.button_class{
+    font-size: 25px;
+    width: 180px;    
+    padding: 20px;
+    transition: 0.4s ease;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-right: 20px;
+}
+.button_class:hover{
+    background-color: white;
+    color: black;
+    font-size: 35px;
+    padding: 18px;
+    text-shadow: 1px 1px 5px black;   
+}
+img{
+    margin: auto 0;
+    width: 60px;
+    height: 60px;
+}
+.drop_down{
+    background-color: black;
+    color: #fff;
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    width: 400px;
+    flex-direction: column;
+}
+.drop_down div{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    border: 1px solid white;
+    margin: 2px;
+    transition: 0.5s ease;
+}
+
+.drop_down div:hover{
+    border: 4px solid white;
+    font-size: larger;
+}
+
+.drop_down .total{
+    padding-left: 200px;
+}
+.drop_down div p{
+    width: 100px;
+}
+.drop_down_display{
+    display: flex;
+}
+span{
+    background-color: white;
+    color: #000;
+    border-radius: 50px;
+    width: 100%;
+}
+
+
+/* #################################### Theme Changer Classes ######################################### */
+.header_changer{
+    font-family: 'Cinzel', serif;
+}
+.header_Container_changer{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    color: black;
+    /* border: black 2px solid; */
+    /* box-shadow: 1px 1px 5px white; */
+    font-family: 'Cinzel', serif;
+    display: flex;
+    justify-content: space-between;
+}
+.spam_changer{
+    background-color: black;
+    color: #fff;
+    font-family: 'Cinzel', serif;
+}
+.button_class_changer{
+    background-color: black;
+    font-family: 'Cinzel', serif;
+    color: white;
+}
+.button_class_changer:hover{
+    background-color: white;
+    color: black;
+    font-family: 'Cinzel', serif;
+}
+.drop_down_changer{
+    background-color: white;
+    color: black;
+    font-family: 'Cinzel', serif;
+}
+.drop_down_changer div{
+    background-color: white;
+    font-family: 'Cinzel', serif;
+    color: black;
+    border: 1px solid black;
+}
+.drop_down_changer div:hover{
+    font-size: larger;
+    border: 4px solid black;
+    font-family: 'Cinzel', serif;
+}

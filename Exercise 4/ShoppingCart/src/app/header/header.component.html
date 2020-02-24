@@ -1,0 +1,20 @@
+<ul class="header_Container" [ngClass]="{header_Container_changer:isChanged}">
+    <h1 [ngClass]="{header_changer:isChanged}" >Welcome to Shopping Cart</h1>
+    <ul>
+        <li><button class="button_class" [ngClass]="{button_class_changer:isChanged}" (click)="click_change()">{{theme}}</button></li>
+        <li><button class="button_class" [ngClass]="{button_class_changer:isChanged}" (click)="count_display()">Cart <span [ngClass]="{spam_changer:isChanged}" spam_changer *ngIf="count_display_number!=0">{{count_display_number}}</span></button></li>  
+    </ul>
+</ul>
+<div class="drop_down"  [ngClass]="{drop_down_display: isdisplayed, drop_down_changer:isChanged}">
+    <div *ngFor="let item of itemsData">
+        <img src="{{item.imageUrl}}">
+        <p>{{item.name}}</p>
+        <h4>{{item.number}}</h4>
+        <h4>${{item.number * item.price}}</h4>
+    </div>    
+    <div class="total">
+        <h4>Total</h4>
+        <h4>quantity: {{count_display_number}}</h4>
+        <h3>${{total_price}}</h3>
+    </div>
+</div>

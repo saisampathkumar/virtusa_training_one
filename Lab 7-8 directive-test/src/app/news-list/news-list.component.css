@@ -1,0 +1,8 @@
+.collapsed{
+    display: none;
+}
+div div{
+    border: 1px solid black;
+    margin-bottom: 10px;
+    width:30%;
+}
