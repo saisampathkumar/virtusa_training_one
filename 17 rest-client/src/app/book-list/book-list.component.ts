@@ -17,4 +17,12 @@ export class BookListComponent implements OnInit {
       this.books = bookList;
     });
   }
+  deleteBook(book: Book) {
+    if (!window.confirm('Are you sure you want to delete this item?')) {
+      return;
+    }
+    this.dataService.deleteBook(book.isbn).subscribe(_ => {
+      this.books = this.books.filter(b => b.isbn !== book.isbn);
+    });
+  }
 }
