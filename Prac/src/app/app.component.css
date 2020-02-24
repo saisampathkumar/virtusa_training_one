@@ -1,0 +1,36 @@
+h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    color: black;
+    text-transform: uppercase;
+}
+
+:host{
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 4px;
+    border-bottom: 1px solid black;
+}
+
+div{
+    padding: 7px;
+    margin: 5px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    height: fit-content;
+    display: block;
+    max-width: 23vw;
+    min-width: max-content;
+}
+
+p{
+    margin: 0;
+}
