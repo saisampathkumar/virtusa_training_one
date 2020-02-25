@@ -2,18 +2,21 @@ input{
     height: 40px;
     width: 500px;
     margin: 20px;
+    display: block;
 }
 button{
     height: 46px;
+    margin: 20px;
 }
-h3{
+h3,p{
     margin: 20px;
 }
 div{
     padding: 10px;
     border: 1px solid black;
     margin: auto 20px;
-    width: max-content;
+    width: 400px;
+    word-wrap: break-word;
 }
 .colorback{
     background-color: gray;
@@ -23,4 +26,8 @@ div{
 .uncolorback{
     background-color: white;
     color: black;
+}
+
+input.ng-valid{
+    box-shadow: 10px 5px 2px black;
 }

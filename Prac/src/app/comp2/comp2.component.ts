@@ -21,7 +21,13 @@ export class Comp2Component implements OnInit, OnChanges, OnDestroy  {
   ngOnDestroy() {
     console.log('Component Destroyed');
   }
+
   logging() {
     console.log(this.input1);
+    return this.input1;
+  }
+
+  alerting() {
+    alert(this.input1);
   }
 }

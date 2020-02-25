@@ -1,6 +1,25 @@
-<h1>Input Page</h1>
+
+<h1>Interpolation, Two way data Binding............</h1>
+
+<div [ngClass]="{colorback: input1}">
+    <h2>Comp2 Parent Component</h2>
+    
+    <input type="text" (keyup)="logging()" [(ngModel)]="input1" placeholder="Enter something to show changes">
+
+    <button (click)="alerting()">Get Aert</button>
+    
+    <h3 *ngIf="input1 != null">Interpollated Output: {{input1}}</h3>
+
+    <h3 *ngIf="input1 != null">Function output using Interpolation: {{logging()}}</h3>
+    
+    <h3 *ngIf="input1 != null">Pipe formating data to uppercase: {{logging() | uppercase}}</h3>
+
+    <h3 *ngIf="input1 != null">Pipe formating data to lowercase: {{logging() | lowercase}}</h3>
+
+    <app-comp3 [outPutString]="input1"></app-comp3>
+
+</div>
+
+<app-comp4></app-comp4>    
 
 
-<input type="text" (keyup)="logging()" [(ngModel)]="input1">
-
-{{input1}}

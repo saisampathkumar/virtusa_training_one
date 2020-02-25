@@ -1,0 +1,32 @@
+<h1>Comp 6</h1>
+<form #theform="ngForm" (ngSubmit)="formOutput(theform.value)">
+    
+    <input [ngModelOptions]="{updateOn:'blur'}" name="input_1" type="text" [(ngModel)]="input1" #theInput1="ngModel" required>
+    
+    <p *ngIf="theInput1.invalid && theInput1.touched" style="color: red;">please enter input 1.........</p>
+    
+    <input name="input_2" type="email" [(ngModel)]="input2" #theInput2="ngModel" required>
+    
+    <p *ngIf="theInput2.invalid && theInput2.touched" style="color: red;">please enter input 2.........</p>
+    
+    <button [disabled]="theform.invalid" type="submit"> get data</button>
+    
+</form>
+<h1>
+    input 1 value:
+    {{theform.value.input_1}}
+</h1>
+
+<h1>
+    input 2 value:
+    {{theform.value['input_2']}}
+</h1>
+
+<h1>
+    validation:
+    {{theform.valid}}
+</h1>
+
+<h1>
+    {{output | date:"MMMM/dd/yyyy"}}
+</h1>
