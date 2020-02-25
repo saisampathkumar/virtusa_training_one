@@ -7,16 +7,4 @@ import { Component, OnInit, OnChanges, OnDestroy } from '@angular/core';
 })
 export class AppComponent {
   title = 'Prac';
-  constructor() {
-    console.log("In constructor")
-  }
-  ngOnInit(){
-    console.log("In NgOnInt")
-  }
-  ngOnChanges(){
-    console.log("In NgOnChanges")
-  }
-  ngOnDestroy(){
-    console.log("In NgOnDestroy")
-  }
 }

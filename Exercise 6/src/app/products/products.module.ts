@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { ProductsComponent } from './products/products.component';
 import { CustomFormsModule } from '../custom-forms/custom-forms.module';
 import { CustomWidgetsModule } from '../custom-widgets/custom-widgets.module';
@@ -14,7 +15,7 @@ import { ProductsServiceService } from './products-service.service';
     CustomFormsModule,
     CustomWidgetsModule
   ],
-  // to export a local component of the module it have to be inported from declerations array and
+  // to export a local component of the module it have to be imported from declerations array and
   // exported from the export array
   exports : [ProductsComponent],
   // a service have to be declared in the providers array
@@ -22,3 +23,6 @@ import { ProductsServiceService } from './products-service.service';
 })
 export class ProductsModule { }
 
+/*
+
+ */
