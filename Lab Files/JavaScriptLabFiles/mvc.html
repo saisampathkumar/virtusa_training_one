@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app>
+<head>
+<title>MVC with AngularJS</title>
+<script src='/js/angular.js'></script>
+
+<script>
+   // Controller 
+   function TaxCalculator($scope) {
+
+      // Operation (behavior)
+      this.applyTax = function() {
+         var person = $scope.person.name;
+         var income = $scope.person.income;
+         taxRate = 0.5;
+         var tax = income * taxRate;
+
+         alert("Grab $ " + tax + " in taxes from poor soul " + person);
+      };
+   }
+</script>
+</head>
+<body ng-controller='TaxCalculator as txCalc' style='font-family: monospace'>
+    Enter person's name&nbsp;&nbsp;: <input type="text" ng-model='person.name'>
+    <br> Enter person's income: <input type="number" ng-model='person.income'>
+    <p style='color: blue;'>The income of [{{person.name}}] is $[{{person.income}}]</p>
+    <button ng-click='txCalc.applyTax()'>Apply Tax</button>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<form class="logIn" *ngIf="!logginned"  #theform="ngForm">
+    
+    <h2>Log In:</h2>
+
+    <input name="theusername" type="text" [(ngModel)]="username" #theInput1="ngModel" placeholder="Enter Username" required>
+    
+    <p *ngIf="theInput1.invalid && theInput1.touched" style="color: red;">please enter username.........</p>
+    
+    <input name="thePassword" type="password" [(ngModel)]="password" #theInput2="ngModel" placeholder="Enter password" required>
+    
+    <p *ngIf="theInput2.invalid && theInput2.touched" style="color: red;">please enter password.........</p>
+    
+    <button [disabled]="theform.invalid" (click)="logIn()">Login</button>
+    
+</form> 
+
+<div class="loggedIn" *ngIf="logginned">
+    <h1>{{Loggedusername}} has logged in.........!</h1>
+
+    <button (click)="logOut()">Log Out</button>
+</div>

@@ -1,0 +1,10 @@
+h1{
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: darkgray;
+    text-shadow: 1.5px 1.5px black;
+    font-size: 50px;
+    font-style: italic;
+}

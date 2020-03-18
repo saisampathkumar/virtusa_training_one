@@ -1,0 +1,14 @@
+
+<button [routerLink]="['']">Home</button>
+
+<button [routerLink]="['Account']" >Account</button>
+
+<div *ngIf="username">
+    <h3 class="right">{{username}}</h3>
+
+    <button class="right">Log Out</button>    
+</div>
+
+<br>
+
+<router-outlet></router-outlet>

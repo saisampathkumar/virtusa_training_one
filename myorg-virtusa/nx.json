@@ -1,0 +1,41 @@
+{
+  "npmScope": "myorg-virtusa",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "my-first-app": {
+      "tags": []
+    },
+    "my-first-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["my-first-app"]
+    },
+    "todos": {
+      "tags": []
+    },
+    "todos-e2e": {
+      "tags": [],
+      "implicitDependencies": ["todos"]
+    },
+    "node-todos-api": {
+      "tags": []
+    },
+    "api": {
+      "tags": []
+    },
+    "data": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
+    }
+  }
+}

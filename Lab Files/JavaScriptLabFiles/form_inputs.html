@@ -1,0 +1,24 @@
+<html ng-app>
+<head>
+<title>Form Inputs</title>
+<script src="/js/angular.js"></script>
+<script>
+   function ThisController($scope) {
+
+      $scope.reverseUserChoice = function() {
+         $scope.userChoice = !$scope.userChoice;
+      }
+   }
+</script>
+</head>
+<body ng-controller='ThisController' style="width: 400px">
+    Some user choice:
+    <input type="checkbox" ng-model="userChoice">
+    <button ng-click="reverseUserChoice()">Reverse User Choice</button>
+    <div>
+        User choice is: <span style="color: blue; font-size: 1.2em">{{userChoice}}</span>
+    </div>
+    </form>
+
+</body>
+</html>

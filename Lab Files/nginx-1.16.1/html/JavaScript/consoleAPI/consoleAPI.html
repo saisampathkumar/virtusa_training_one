@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Using JavaScript console object API</title>
+	<script>
+        function f1 () {
+         console.log("In F1()")
+         console.time("T1");
+         for(var i=0;i<10;i++){
+            f2();
+         }
+         console.timeEnd("T1");
+        } 
+        
+        function f2 () {
+         console.count("In F2()")
+        }
+   </script>
+</head>
+<body>
+   <input type="button" onclick="f1();" value="Run!" />
+</body>
+</html>

@@ -1,0 +1,29 @@
+input{
+    height: 40px;
+    width: 500px;
+    margin: 20px;
+    display: block;
+}
+button{
+    height: 46px;
+    margin: 20px;
+}
+h3,p{
+    margin: 20px;
+}
+div{
+    padding: 10px;
+    border: 1px solid black;
+    margin: auto 20px;
+    width: 400px;
+    word-wrap: break-word;
+}
+.logIn{
+    background-color: brown;
+    color: white;
+    width: fit-content;
+}
+.loggedIn{
+    background-color: darkcyan;
+    color: white;
+}
